@@ -38,6 +38,8 @@
   ])
   provide(canKey, can)
 
+
+  console.log(':: >> Call createWorkspaceRoutes by <ui-library/demo/App.vue> ')
   const routes = createWorkspaceRoutes()
 
   provide(workspaceRoutesKey, routes)

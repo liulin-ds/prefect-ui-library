@@ -70,6 +70,7 @@ export class Api<T extends PrefectConfig = PrefectConfig> {
     const config: AxiosRequestConfig = {
       baseURL: this.composeBaseUrl(),
       headers: this.composeHeaders(),
+      params: { user: window.localStorage.getItem('prefect-user') ?? 'public' },
     }
 
     return axios.create(config)
